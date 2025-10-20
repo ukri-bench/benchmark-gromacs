@@ -1,11 +1,10 @@
-# Template benchmark
+# GROMACS benchmarks
 
-The repository demonstrates/describes the structure of a repository for a 
-benchmark released as part of the UKRI Living Benchmarks project.
+The repository provides benchmarks for [GROMACS](https://www.gromacs.org/).
 
 ## Status
 
-Alpha
+Under development.
 
 ## Maintainers
 
@@ -15,11 +14,9 @@ Alpha
 
 ## Overview
 
-### Software
+### Code/library
 
-- ADD: Link to repo/website for main software/framework/library for the benchmark
-- (Optional) ADD: Link to source code for benchmark case (required when software is a framework
-  or library and so does not have an executable that can be used for benchmarking)
+[GROMACS](https://www.gromacs.org/)
 
 ### Architectures
 
@@ -45,7 +42,7 @@ Alpha
 
 ## Building the benchmark
 
-The benchmark can be built using Spack or manually. If you are using the 
+The benchmark can be built using Spack or manually. If you are using the
 ReFrame method to run the benchmark described below, it will automatically
 perform the build step for you.
 
@@ -73,29 +70,6 @@ in a separate repository: [https://github.com/ukri-bench/system-configs]
     too long to fit on this page
 
 ## Running the benchmark
-
-The benchmark can be run using ReFrame or manually. 
-
-If you use ReFrame, then ReFrame will build the software, run the benchmark,
-test for correctness, extract the performance/figure of merit (FoM) for you and
-report them.
-
-### Running using ReFrame
-
-The ReFrame test configuration is available in the `reframe/` subdirectory.
-
-ADD: Instructions on running ReFrame for this benchmark.
-
-Note: to use ReFrame, you must have ReFrame installed on the system you are using and
-a valid ReFrame system configuration. Example ReFrame configurations are available
-in a separate repository: [https://github.com/ukri-bench/system-configs]
-
-### Running manually
-
-- ADD: Example of how to run the software (may include example job submission scripts
-  in separate files in the repo)
-- ADD: Example of how to test correctness
-- ADD: Example of how to extract performance/FoM
 
 ## Example performance data
 
