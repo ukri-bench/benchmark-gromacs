@@ -18,7 +18,7 @@ export GMX_GPU_PME_PP_COMMS=true
 export GMX_ENABLE_DIRECT_GPU_COMM=1
 
 # run gromacs
-gmx mdrun -s ${atoms}-atoms.tpr -ntomp $ntasks -nb gpu -pme gpu -bonded gpu -dlb no -nstlist 300 -pin on -v -gpu_id 0
+gmx mdrun -s benchmark.tpr -ntomp $ntasks -nb gpu -pme gpu -bonded gpu -dlb no -nstlist 300 -pin on -v -gpu_id 0
 #rm benchmark.tpr traj.trr ener.edr
 
 python gmxlog.py md.log results.json

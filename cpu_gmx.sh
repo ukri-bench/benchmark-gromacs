@@ -16,7 +16,7 @@ export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
 # note: the gromacs spack package should be fine for this
 
 # run gromacs
-srun --unbuffered --cpu-bind=cores --distribution=block:block --hint=nomultithread gmx_mpi mdrun -s ${atoms}-atoms.tpr
+srun --unbuffered --cpu-bind=cores --distribution=block:block --hint=nomultithread gmx_mpi mdrun -s benchmark.tpr.tpr
 #rm benchmark.tpr traj.trr ener.edr
 
 python gmxlog.py md.log results.json
