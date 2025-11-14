@@ -19,15 +19,14 @@ Under development.
 
 ### Architectures
 
-- CPU: *e.g. x86, Arm*
-- GPU: *e.g. NVIDIA, AMD, Intel*
-- Other: *e.g. Cerebras, ...*
+- CPU: x86, Arm64, PPC64
+- GPU: NVIDIA, AMD, Intel*
 
 ### Languages and programming models
 
-- Programming languages: *e.g. Fortran, C++, Python*
-- Parallel models: *e.g. MPI, OpenMP*
-- Accelerator offload models: *e.g. CUDA, HIP, OpenACC, Kokkos*
+- Programming languages:  C, C++, Python*
+- Parallel models: MPI, OpenMP*
+- Accelerator offload models: CUDA, OpenCL, SYCL
 
 ### Seven 'dwarfs'
 
