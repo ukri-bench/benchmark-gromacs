@@ -8,9 +8,8 @@ Under development.
 
 ## Maintainers
 
-- Maintainer 1 (Link to github profile)
-- Maintainer 2 (Link to github profile)
-- ...
+- [James Gebbie-Rayet](https://github.com/jimboid)
+- [Robert Welch](https://github.com/Rob-Welch) 
 
 ## Overview
 
@@ -50,13 +49,38 @@ Once it has been built the benchmark executable is called `name-of-exe.x`
 
 ### Spack build
 
-A Spack package is provided in `spack/`:
+Gromacs can be installed from a spack repository maintained by the core
+developers:
+
+For GROMACS with MPI for CPU based architecture
 
 ```bash
-spack repo add ./spack
-spack info <package name>
+spack install gromacs@2025.2 +mpi
 ```
-- ADD: Describe Spack spec and variants available
+For an MPI + CUDA build for NVIDA GPU architecture
+
+```bash
+spack install gromacs@2025.2 +mpi +cuda
+```
+
+For a multinode, multiGPU compilation targetting specific GPU arch
+
+```bash
+spack install gromacs@2025.2 +mpi +cuda cuda_arch=70,80,90 +cufftmp
+```
+
+Often better for single NVIDA GPU tests is to use threadMPI and CUDA
+
+```bash
+spack install gromacs@2025.2 ~mpi +cuda
+```
+
+Enable SYCL for use with Intel and AMD GPUs, may need to add
+hardware specific backends to the commands
+
+```bash
+spack install gromacs@2025.2 +sycl
+```
 
 Note: to use Spack, you must have Spack installed on the system you are using and
 a valid Spack system configuration. Example Spack configurations are available
